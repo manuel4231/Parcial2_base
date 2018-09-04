@@ -28,7 +28,12 @@ public class HazardSpawner : MonoBehaviour
         myCollider = GetComponent<Collider2D>();
 
         InvokeRepeating("SpawnEnemy", 0.2F, spawnFrequency);
+
+        InvokeRepeating("SpawnEnemy2", 0.3F, spawnFrequency);;
+
     }
+
+
 
     private void SpawnEnemy()
     {
@@ -41,4 +46,18 @@ public class HazardSpawner : MonoBehaviour
             Instantiate(hazardTemplate, myCollider.GetPointInVolume(), transform.rotation);
         }
     }
+
+    private void SpawnEnemy2()
+    {
+        if (hazardTemplate == null)
+        {
+            CancelInvoke();
+        }
+        else
+        {
+            Instantiate(hazardTemplate, myCollider.GetPointInVolume(), transform.rotation);
+            transform.rotation = Random.rotation;
+        }
+    }
+
 }

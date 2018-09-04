@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed74c60eb790197469e11f685fb46ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
   maxResistance: 5
 --- !u!212 &31150656
 SpriteRenderer:
@@ -358,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed74c60eb790197469e11f685fb46ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
   maxResistance: 5
 --- !u!212 &662420646
 SpriteRenderer:
@@ -447,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed74c60eb790197469e11f685fb46ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigo: {fileID: 0}
   maxResistance: 5
 --- !u!212 &685850841
 SpriteRenderer:
@@ -855,6 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   bulletGO: {fileID: 1636773326158786, guid: 1541e6cdb4c541942a69d3d62dc9c36d, type: 2}
+  bulletGO2: {fileID: 1636773326158786, guid: 2d24b028c15c8fc4b91d5fefba7db0d8, type: 2}
 --- !u!61 &1991462837
 BoxCollider2D:
   m_ObjectHideFlags: 0

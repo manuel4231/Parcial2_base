@@ -31,9 +31,27 @@ public class Hazard : MonoBehaviour
                 OnHazardDestroyed();
             }
         }
+
+        if (collision.gameObject.GetComponent<Bullet2>() != null)
+        {
+            if (resistance == 0)
+            {
+                OnHazardDestroyed();
+            }
+        }
+
+        if (collision.gameObject.GetComponent<Shelter>() != null)
+        {
+            resistance -= 1;
+
+            if (resistance == 0)
+            {
+                OnHazardDestroyed();
+            }
+        }
     }
 
-    protected void OnHazardDestroyed()
+    public void OnHazardDestroyed()
     {
         //TODO: GameObject should spin for 'spinTime' secs. then disappear
         Destroy(gameObject);

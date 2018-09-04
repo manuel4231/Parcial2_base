@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Object bulletGO;
 
+    [SerializeField]
+    private Object bulletGO2;
+
     protected bool InsideCamera(bool positive)
     {
         float direction = positive ? 1F : -1F;
@@ -34,6 +37,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
         movementFactor = Input.GetAxis("Horizontal");
 
         if (InsideCamera(movementFactor > 0F) && movementFactor != 0F)
@@ -41,10 +45,17 @@ public class PlayerController : MonoBehaviour
             transform.position += new Vector3(movementFactor * speed * Time.deltaTime, 0F, 0F);
         }
 
-        if (bulletGO != null && Input.GetAxis("Jump") != 0 && canFire)
+        if (bulletGO != null && Input.GetAxis("Fire1") != 0 && canFire)
         {
             Instantiate(bulletGO, transform.position + (transform.up * 0.5F), Quaternion.identity);
             print("Fiyah!");
+            StartCoroutine("FireCR");
+        }
+
+        if (bulletGO2 != null && Input.GetAxis("Fire2") != 0 && canFire)
+        {
+            Instantiate(bulletGO2, transform.position + (transform.up * 0.5F), Quaternion.identity);
+            print("Fiyah2!");
             StartCoroutine("FireCR");
         }
     }
@@ -70,4 +81,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(coolDownTime);
         canFire = true;
     }
+
 }
