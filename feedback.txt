@@ -1,0 +1,16 @@
+Feedback
+
+Examen (1.0/5.0)
+ * Bullet2 (APBullet?) no destruye hazards. Solo se marcó como trigger, pero no hay detección de colisiones.
+ * Bullet2 es una copia de Bullet. Por qué?
+ * No hay implementación de Debris o Invader.
+ * La implementación del tiempo de regeneración del shelter no es correcta. No es incrementar la resistencia máxima, es restaurar la resistencia perdida, siempre que el shelter no reciba daño durante el tiempo. Por qué hay números quemados?
+ * Ojo con los nombres de clases, métodos y atributos. El enunciado los daba, precisamente para tener contexto de lo que estaban haciendo.
+ * No hay GameOver cuando un hazard traspasa la posición del jugador.
+ * Hay GameOver cuando un shelter es destruido.
+ * Por qué los Hazards se instancian con rotaciones raras?
+
+Bonificación (0.0/0.5)
+ * No hay propuesta para la bonificación
+
+Total: 1.0 / 5.0
